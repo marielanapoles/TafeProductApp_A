@@ -8,14 +8,16 @@ namespace ProductApps
 {
     class Product
     {
+        private decimal delivery = 25;
         private decimal wrapping = 5;
+        private decimal gst = 1.1m;
 
         private decimal price;
         private int quantity;
         private decimal totalPayment;
-        private decimal delivery;
+        //private decimal delivery;
         //private decimal wrapping;
-        private decimal gst;
+        //private decimal gst;
         private decimal totalCharge;
         private decimal totalWrapping;
 
@@ -97,6 +99,13 @@ namespace ProductApps
         {
             TotalCharge = TotalPayment + Delivery + Wrapping;
         }
+
+        //-------TOTAL Wrapping Charge
+        public void calcGST()
+        {
+            TotalCharge = (TotalPayment + Delivery + Wrapping) * gst;
+        }
+
 
     }
 }

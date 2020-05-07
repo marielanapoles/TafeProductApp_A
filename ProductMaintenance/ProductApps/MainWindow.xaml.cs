@@ -42,6 +42,10 @@ namespace ProductApps
                 //added wrapping charge
                 cProduct.calcWrapping();
                 tbWrappingCharge.Text = Convert.ToString(cProduct.TotalCharge);
+
+                //added GST charge
+                cProduct.calcGST();
+                tbGSTCharge.Text = Convert.ToString(cProduct.TotalCharge);
             }
             catch (FormatException)
             {
