@@ -38,6 +38,10 @@ namespace ProductApps
                 //added calculation
                 cProduct.calcTotalCharge();
                 tbTotalCharge.Text = Convert.ToString(cProduct.TotalCharge);
+
+                //added wrapping charge
+                cProduct.calcWrapping();
+                tbWrappingCharge.Text = Convert.ToString(cProduct.TotalCharge);
             }
             catch (FormatException)
             {
